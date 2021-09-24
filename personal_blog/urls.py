@@ -9,6 +9,7 @@ urlpatterns = [
     path('api-auth/',include('rest_framework.urls')),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('api/blogs/',include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 
 #this code will handle react routing
