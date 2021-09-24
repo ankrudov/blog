@@ -7,9 +7,9 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('api-auth/',include('rest_framework.urls')),
-    path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('api/blogs/',include('blog.urls')),
+    # path('blog/',include('blog.urls')), this is causing issues for some reason
+    path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 
 #this code will handle react routing
